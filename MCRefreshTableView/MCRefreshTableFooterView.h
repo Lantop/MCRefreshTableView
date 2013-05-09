@@ -27,5 +27,7 @@ typedef enum {
 
 @property (nonatomic, weak) id <MCRefreshTableFooterViewDelegate> delegate;
 @property (nonatomic, assign) MCRefreshTableFooterViewState state;
+@property (nonatomic, strong) UIButton *buttonLoadMore;
+@property (nonatomic, strong) UILabel *labelLoadEnd;
 
 @end

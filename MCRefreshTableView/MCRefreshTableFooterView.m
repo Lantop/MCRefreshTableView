@@ -10,10 +10,8 @@
 
 @interface MCRefreshTableFooterView ()
 
-@property (nonatomic, strong) UIButton *buttonLoadMore;
 @property (nonatomic, strong) UIView *viewLoading;
 @property (nonatomic, strong) UIActivityIndicatorView *activityView;
-@property (nonatomic, strong) UILabel *labelLoadEnd;
 
 @end
 
