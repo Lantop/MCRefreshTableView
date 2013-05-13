@@ -140,6 +140,15 @@
     }
 }
 
+- (void)showLoadingLatest {
+    [self setContentOffset:CGPointMake(0.f, -65.f) animated:NO];
+    [self.pullRefreshView egoRefreshScrollViewDidEndDragging:self];
+}
+
+- (void)showLoadingLast {
+    [self loadMore];
+}
+
 #pragma mark - Actions Private
 
 - (void)loadMore {

@@ -55,4 +55,8 @@ MCRefreshTableFooterViewDelegate, UIScrollViewDelegate, UITableViewDataSource, U
 
 - (void)MCScrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
 
+- (void)showLoadingLatest;
+
+- (void)showLoadingLast;
+
 @end
