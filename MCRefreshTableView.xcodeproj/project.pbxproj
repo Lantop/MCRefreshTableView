@@ -10,7 +10,7 @@
 		F950C2B61737839200E2770C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F950C2B51737839200E2770C /* Foundation.framework */; };
 		F950C2BB1737839200E2770C /* MCRefreshTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F950C2BA1737839200E2770C /* MCRefreshTableView.h */; };
 		F950C2BD1737839200E2770C /* MCRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F950C2BC1737839200E2770C /* MCRefreshTableView.m */; };
-		F950C2C9173784ED00E2770C /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F950C2C4173784ED00E2770C /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		F950C2C9173784ED00E2770C /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F950C2C4173784ED00E2770C /* EGORefreshTableHeaderView.m */; };
 		F950C2CA173784ED00E2770C /* MCRefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F950C2C6173784ED00E2770C /* MCRefreshTableFooterView.m */; };
 /* End PBXBuildFile section */
 
