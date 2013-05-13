@@ -33,6 +33,9 @@ typedef enum {
 @protocol MCRefreshTableViewDelegate <NSObject>
 
 @required
+- (void)MCRefreshTableViewWillBeginLoadingOrigin;
+
+@required
 - (void)MCRefreshTableViewWillBeginLoadingLatest;
 
 @required
@@ -58,5 +61,7 @@ MCRefreshTableFooterViewDelegate, UIScrollViewDelegate, UITableViewDataSource, U
 - (void)showLoadingLatest;
 
 - (void)showLoadingLast;
+
+- (void)showLoadingOrigin;
 
 @end

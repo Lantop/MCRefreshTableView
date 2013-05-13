@@ -149,6 +149,16 @@
     [self loadMore];
 }
 
+- (void)showLoadingOrigin {
+    if (!self.isLoading) {
+        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingLast)]) {
+            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingLast];
+        }
+        self.isLoading = YES;
+        self.loadMoreView.state = MCRefreshTableFooterViewStateLoading;
+    }
+}
+
 #pragma mark - Actions Private
 
 - (void)loadMore {
@@ -170,10 +180,9 @@
 
 - (void)reloadTableViewDataSource{
 	self.isLoading = YES;
-    if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingLatest)]) {
-        [self.delegateRefresh MCRefreshTableViewWillBeginLoadingLatest];
+    if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingOrigin)]) {
+        [self.delegateRefresh MCRefreshTableViewWillBeginLoadingOrigin];
     }
-    
 }
 
 - (void)doneLoadingTableViewData{
