@@ -58,6 +58,12 @@
         }
             break;
             
+        case MCRefreshTableViewModeRefreshDisabled: {
+            [self.pullRefreshView removeFromSuperview];
+            self.tableFooterView = nil;
+        }
+            break;
+            
         default:
             break;
     }

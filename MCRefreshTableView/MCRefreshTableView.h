@@ -15,6 +15,7 @@ typedef enum {
     MCRefreshTableViewModeNormal = 0,//load latest, load last
     MCRefreshTableViewModeJustLatest,//just load latest
     MCRefreshTableViewModeJustLast,//just load last
+    MCRefreshTableViewModeRefreshDisabled,
 }MCRefreshTableViewMode;
 
 //table State
