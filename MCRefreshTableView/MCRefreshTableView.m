@@ -157,8 +157,8 @@
 
 - (void)showLoadingOrigin {
     if (!self.isLoading) {
-        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingLast)]) {
-            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingLast];
+        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingOrigin)]) {
+            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingOrigin];
         }
         self.isLoading = YES;
         self.loadMoreView.state = MCRefreshTableFooterViewStateLoading;
