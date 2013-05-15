@@ -33,16 +33,14 @@ typedef enum {
 
 @protocol MCRefreshTableViewDelegate <NSObject>
 
-@required
+@optional
+
 - (void)MCRefreshTableViewWillBeginLoadingOrigin;
 
-@required
 - (void)MCRefreshTableViewWillBeginLoadingLatest;
 
-@required
 - (void)MCRefreshTableViewWillBeginLoadingLast;
 
-@optional
 - (UIView*)MCRefreshTableViewErrorView;
 
 @end
