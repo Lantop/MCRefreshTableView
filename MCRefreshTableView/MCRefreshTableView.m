@@ -185,9 +185,11 @@
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource{
-	self.isLoading = YES;
-    if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingOrigin)]) {
-        [self.delegateRefresh MCRefreshTableViewWillBeginLoadingOrigin];
+    if (!self.isLoading) {
+        self.isLoading = YES;
+        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingOrigin)]) {
+            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingOrigin];
+        }
     }
 }
 
