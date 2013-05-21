@@ -187,8 +187,8 @@
 - (void)reloadTableViewDataSource{
     if (!self.isLoading) {
         self.isLoading = YES;
-        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingOrigin)]) {
-            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingOrigin];
+        if ([self.delegateRefresh respondsToSelector:@selector(MCRefreshTableViewWillBeginLoadingLatest)]) {
+            [self.delegateRefresh MCRefreshTableViewWillBeginLoadingLatest];
         }
     }
 }
