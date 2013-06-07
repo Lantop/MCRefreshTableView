@@ -138,7 +138,7 @@
 
 - (void)MCScrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
 	[self.pullRefreshView egoRefreshScrollViewDidEndDragging:scrollView];
-    if(scrollView.contentOffset.y-100.f > ((scrollView.contentSize.height - scrollView.frame.size.height)))
+    if(scrollView.contentOffset.y-65.f > ((scrollView.contentSize.height - scrollView.frame.size.height)))
     {
         if (self.loadMoreView.state != MCRefreshTableFooterViewStateEnd) {
             [self loadMore];

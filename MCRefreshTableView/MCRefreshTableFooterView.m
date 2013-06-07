@@ -19,7 +19,7 @@
 
 - (UIButton*)buttonLoadMore {
     if (!_buttonLoadMore) {
-        _buttonLoadMore = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _buttonLoadMore = [UIButton buttonWithType:UIButtonTypeCustom];
         _buttonLoadMore.frame = CGRectMake((self.frame.size.width-240.f)/2, (self.frame.size.height-30.f)/2, 240.f, 30.f);
         [_buttonLoadMore setTitle:@"获取更多" forState:UIControlStateNormal];
         [_buttonLoadMore setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
