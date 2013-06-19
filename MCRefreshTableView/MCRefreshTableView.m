@@ -133,15 +133,19 @@
 #pragma mark - Actions Public
 
 - (void)MCScrollViewDidScroll:(UIScrollView *)scrollView {
-	[self.pullRefreshView egoRefreshScrollViewDidScroll:scrollView];
+    if (self.tableMode == MCRefreshTableViewModeNormal || self.tableMode == MCRefreshTableViewModeJustLatest) {
+        [self.pullRefreshView egoRefreshScrollViewDidScroll:scrollView];
+    }
 }
 
 - (void)MCScrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-	[self.pullRefreshView egoRefreshScrollViewDidEndDragging:scrollView];
-    if(scrollView.contentOffset.y-65.f > ((scrollView.contentSize.height - scrollView.frame.size.height)))
-    {
-        if (self.loadMoreView.state != MCRefreshTableFooterViewStateEnd) {
-            [self loadMore];
+    if (self.tableMode == MCRefreshTableViewModeNormal || self.tableMode == MCRefreshTableViewModeJustLatest) {
+        [self.pullRefreshView egoRefreshScrollViewDidEndDragging:scrollView];
+        if(scrollView.contentOffset.y-65.f > ((scrollView.contentSize.height - scrollView.frame.size.height)))
+        {
+            if (self.loadMoreView.state != MCRefreshTableFooterViewStateEnd) {
+                [self loadMore];
+            }
         }
     }
 }
